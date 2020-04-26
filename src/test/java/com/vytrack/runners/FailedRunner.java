@@ -7,19 +7,17 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         glue = "com/vytrack/step_definitions",
-        features = "src/test/resources",
+        features = "@target/rerun.txt",
         dryRun = false,
         strict = false,
-        tags = "@view_calendar_events",
         plugin = {
-                "html:target/default-report",
-                "json:target/cucumber1.json",
-                "rerun:target/rerun.txt"
+                "html:target/failed-default-report",
+                "json:target/failed_report.json",
+
 
         }
 
 )
-public class CucumberRunner {
 
-
+public class FailedRunner {
 }
